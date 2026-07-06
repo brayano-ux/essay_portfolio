@@ -1,0 +1,97 @@
+@import url('https://googleapis.com');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+  padding: auto;
+  margin: 0;
+  background-color: black;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.849);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 100px;
+    height: 12vh;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60%;
+    gap: 30px;
+}
+
+.icon {
+    color: white;
+    font-size: 30px;
+    background-color: burlywood;
+    padding: 15px;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    color: white;
+    padding: 10px;
+}
+
+li {
+    list-style: none;
+}
+
+ul a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    font-size: 14px;
+    display: inline-block;
+    border: 1px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.premier {
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    background-color: rgb(3, 190, 87);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.pre {
+    color: rgb(3, 179, 3);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+ul a:hover {
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: 1px solid rgb(1, 104, 1);
+    background-color: rgba(0, 0, 0, 0.849);
+    color: rgb(1, 104, 1);
+}

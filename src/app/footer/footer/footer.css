@@ -1,0 +1,8 @@
+/* Footer styles - All styling handled by Tailwind CSS classes */
+/* No additional CSS needed */
+
+@media (max-width: 768px) {
+  .footer-top {
+    grid-template-columns: 1fr;
+  }
+}

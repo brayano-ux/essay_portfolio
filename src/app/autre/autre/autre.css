@@ -1,0 +1,147 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f4f7f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.tous {
+    top: 50px;
+    position: relative;
+    left: 20%;
+    display: flex;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.1), 0 10px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    width: 750px;
+    max-width: 100%;
+    gap: 50px;
+    min-height: 480px;
+}
+
+.un {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.iden {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.input {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.in {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+div input {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    background-color: #f9f9f9;
+    font-size: 0.9rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+div input:focus {
+    border-color: rgb(235, 9, 103);
+    background-color: #fff;
+}
+
+a {
+    display: block;
+    color: #666;
+    font-size: 0.85rem;
+    text-decoration: none;
+    margin: 10px 0 20px 0;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: rgb(235, 9, 103);
+}
+
+button {
+    background-color: rgb(235, 9, 103);
+    color: white;
+    border: 1px solid transparent;
+    padding: 12px 45px;
+    border-radius: 25px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 80ms ease-in, background-color 0.3s;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+button:hover {
+    background-color: rgb(200, 5, 85);
+}
+
+.deux {
+    flex: 1;
+    background: linear-gradient(135deg, rgb(255, 65, 108), rgb(235, 9, 103));
+    color: white;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.deux h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.deux span {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    opacity: 0.9;
+    margin-bottom: 30px;
+}
+
+.but {
+    width: auto;
+}
+
+.but button {
+    background-color: transparent;
+    border-color: white;
+}
+
+.but button:hover {
+    background-color: white;
+    color: rgb(235, 9, 103);
+}
