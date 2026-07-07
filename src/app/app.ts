@@ -6,6 +6,7 @@ import { Main } from './main/main/main';
 import {Services} from './services/services/services';
 import {Projets} from './projets/projets/projets';
 import{About} from './about/about/about';
+import{Autre} from './autre/autre/autre';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { 
@@ -18,7 +19,7 @@ import {
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, Header, Footer, Main, FontAwesomeModule,Services,Projets,About],
+  imports: [RouterOutlet, Header, Footer, Main, Autre,FontAwesomeModule,Services,Projets,About],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })

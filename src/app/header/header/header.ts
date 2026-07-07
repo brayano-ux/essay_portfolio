@@ -9,5 +9,12 @@ import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
   styleUrl: './header.css',
 })
 export class Header {
+  img: string = "./img/favicon.ico";
+  home: string = "home";
+  about: string = "about";
+  services: string = "services";
+  projects: string = "projects";
+  contact: string = "contact";
+  tab: string[] = ["home", "about", "services", "projects", "contact"];
   protected readonly faCartShopping = faCartShopping;
 }

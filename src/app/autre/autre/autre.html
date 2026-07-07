@@ -1,4 +1,4 @@
-
+<!-- 
     <div class="tous">
         <div class="un">
             <h1 class="iden">S'identifier</h1>
@@ -22,4 +22,28 @@
                 <button type="submit">S'inscrire</button>
             </div>
         </div>
-    </div>
+    </div> -->
+                <span>{{ nom }} </span>
+                <span>{{nbre}}</span>
+                <span>{{verite}}</span>
+                <span>{{tab}}</span>
+                <!-- <img src="{{image}}" alt=""> -->
+                <!-- <span>{{objet}}</span> -->
+                <!-- <span>{{tableauobjet}}</span> -->
+
+                @for(i of tab; track i){
+                    <span>{{i}}</span>
+                }
+                
+<p>{{personne.nom}}</p> 
+<p>{{personne.prenom}}</p> 
+<p>{{personne.age}}</p> 
+
+ @for(i of tableauobjet; track i){
+    <p>{{i.nom}}</p>
+    <p>{{i.prenom}}</p>
+    <p>{{i.age}}</p>
+
+                }
+
+               
