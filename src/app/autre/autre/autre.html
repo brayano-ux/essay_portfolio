@@ -1,49 +1,69 @@
-<!-- 
-    <div class="tous">
-        <div class="un">
-            <h1 class="iden">S'identifier</h1>
-            <div class="input">
-                <div class="in">
-                    <input type="email" placeholder="Email">
-                </div>
-                <div class="in">
-                    <input type="password" placeholder="Mot de passe">
-                </div>
-                <div>
-                    <a href="">Mot de passe oublié ?</a>
-                </div>
-                <button type="submit">S'identifier</button>
-            </div>
-        </div>
-        <div class="deux"> 
-            <h1>Salut l'ami !</h1>
-            <span>Entrez vos données personnelles et <br> commencez votre voyage avec nous</span>
-            <div class="but">
-                <button type="submit">S'inscrire</button>
-            </div>
-        </div>
-    </div> -->
-                <span>{{ nom }} </span>
-                <span>{{nbre}}</span>
-                <span>{{verite}}</span>
-                <span>{{tab}}</span>
-                <!-- <img src="{{image}}" alt=""> -->
-                <!-- <span>{{objet}}</span> -->
-                <!-- <span>{{tableauobjet}}</span> -->
+<div class="max-w-md mx-auto my-8 p-6 bg-white rounded-2xl shadow-sm border border-slate-100 font-sans">
+  
+  <div class="mb-6 p-4 bg-slate-50 rounded-xl border border-slate-100">
+    <h3 class="text-sm font-semibold text-slate-700 mb-3">Ajouter un produit personnalisé</h3>
+    <div class="space-y-3">
+      <input 
+        type="text" 
+        placeholder="Nom du produit" 
+        [value]="newName()"
+        (input)="newName.set($any($event.target).value)"
+        class="w-full px-3 py-2 text-sm bg-white border border-slate-200 rounded-lg focus:outline-none focus:border-indigo-500" />
+      
+      <input 
+        type="number" 
+        placeholder="Prix (F)" 
+        [value]="newPrice() === null ? '' : newPrice()"
+        (input)="newPrice.set(+$any($event.target).value)"
+        class="w-full px-3 py-2 text-sm bg-white border border-slate-200 rounded-lg focus:outline-none focus:border-indigo-500" />
+      
+      <button 
+        (click)="addItem()"
+        [disabled]="!newName().trim() || !newPrice() || newPrice()! <= 0"
+        class="w-full bg-slate-800 text-white text-xs font-semibold py-2 px-4 rounded-lg hover:bg-slate-700 disabled:opacity-50 transition-all">
+        + Insérer dans la liste
+      </button>
+    </div>
+  </div>
 
-                @for(i of tab; track i){
-                    <span>{{i}}</span>
-                }
-                
-<p>{{personne.nom}}</p> 
-<p>{{personne.prenom}}</p> 
-<p>{{personne.age}}</p> 
+  <h2 class="text-lg font-bold text-slate-800 mb-4 flex items-center gap-2">
+    📋 Votre Liste 
+    <span class="text-xs font-semibold px-2 py-0.5 bg-slate-100 text-slate-600 rounded-full">
+      {{ itemCount() }}
+    </span>
+  </h2>
 
- @for(i of tableauobjet; track i){
-    <p>{{i.nom}}</p>
-    <p>{{i.prenom}}</p>
-    <p>{{i.age}}</p>
+  <ul class="divide-y divide-slate-100 mb-6">
+    @for (item of items(); track item.id) {
+      <li class="py-2.5 flex justify-between items-center text-sm">
+        <span class="text-slate-600 font-medium">{{ item.name }}</span>
+        <span class="text-slate-800 font-semibold">{{ item.price }} F</span>
+      </li>
+    } @empty {
+      <li class="py-4 text-center text-sm text-slate-400 italic">Aucun article saisi.</li>
+    }
+  </ul>
 
-                }
+  <div class="bg-slate-50 rounded-xl p-4 space-y-2 text-sm mb-4">
+    <div class="flex justify-between text-slate-500">
+      <span>Sous-total</span>
+      <span>{{ subtotal() }} F</span>
+    </div>
+    <div class="flex justify-between text-slate-500">
+      <span>TVA (20%)</span>
+      <span>{{ tax() }} F</span>
+    </div>
+    <div class="border-t border-slate-200 pt-2 flex justify-between font-bold text-slate-800">
+      <span>Total</span>
+      <span class="text-indigo-600 text-base">{{ total() }} F</span>
+    </div>
+  </div>
 
-               
+  <!-- ACTION : Envoi WhatsApp -->
+  <button 
+    (click)="sendToWhatsApp()"
+    [disabled]="itemCount() === 0"
+    class="w-full bg-[#25D366] hover:bg-[#20ba5a] text-white font-bold py-3 px-4 rounded-xl transition-all flex items-center justify-center gap-2 shadow-sm disabled:bg-slate-200 disabled:text-slate-400 disabled:cursor-not-allowed">
+    💬 Commander sur WhatsApp
+  </button>
+</div>

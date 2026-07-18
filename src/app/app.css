@@ -17,10 +17,8 @@ html {
 body {
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     background-color: #f4f7f6;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     min-height: 100vh;
+    margin: 0;
 }
 
 .tous {
@@ -123,6 +121,35 @@ button:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+
+@media (max-width: 768px) {
+    .tous {
+        flex-direction: column;
+        width: 100%;
+        min-height: auto;
+        border-radius: 0;
+    }
+
+    .un,
+    .deux {
+        width: 100%;
+        padding: 30px;
+    }
+
+    .input {
+        width: 100%;
+        align-items: stretch;
+    }
+
+    div input {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+        padding: 14px 20px;
+    }
 }
 
 .deux h1 {

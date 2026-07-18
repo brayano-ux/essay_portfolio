@@ -1,0 +1,105 @@
+<footer class="bg-white text-gray-600 border-t border-gray-100 pt-16 pb-8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Grille principale des colonnes -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+      
+      <!-- Colonne 1 : Description & Contacts -->
+      <div class="lg:col-span-1">
+        <h2 class="text-xl font-serif font-bold tracking-wide uppercase text-gray-900 mb-4">
+          <span class="text-pink-500">Boutique</span> de Fleurs
+        </h2>
+        <p class="text-sm text-gray-500 mb-6 leading-relaxed">
+          Découvrez des produits uniques qui inspirent votre style de vie, l'alliance d'un savoir-faire d'exception et d'un design moderne.
+        </p>
+        
+        <!-- Coordonnées avec les balises Angular FontAwesome -->
+        <ul class="space-y-3 text-sm">
+          <li class="flex items-start gap-3">
+            <fa-icon [icon]="iconLocation" class="text-pink-500 mt-0.5 w-4 text-center"></fa-icon>
+            <span>123 Fashion Street, Suite Oly, AC 12345</span>
+          </li>
+          <li class="flex items-center gap-3">
+            <fa-icon [icon]="iconPhone" class="text-pink-500 w-4 text-center"></fa-icon>
+            <a href="tel:+12567234567" class="hover:text-pink-600 transition-colors">+1 (256) 723-4567</a>
+          </li>
+          <li class="flex items-center gap-3">
+            <fa-icon [icon]="iconEnvelope" class="text-pink-500 w-4 text-center"></fa-icon>
+            <a href="mailto:hello@flower-shop.com" class="hover:text-pink-600 transition-colors">hello@flower-shop.com</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Colonne 2 : Boutique -->
+      <div>
+        <h3 class="text-xs font-bold text-gray-900 uppercase tracking-widest mb-4">Boutique</h3>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="#" class="hover:text-pink-600 transition-colors">Tous les produits</a></li>
+          <li><a href="#" class="hover:text-pink-600 transition-colors">Nouveautés</a></li>
+          <li><a href="#" class="hover:text-pink-600 transition-colors">Ventes</a></li>
+          <li><a href="#" class="hover:text-pink-600 transition-colors">En vedette</a></li>
+        </ul>
+      </div>
+
+      <!-- Colonne 3 : Service Client -->
+      <div>
+        <h3 class="text-xs font-bold text-gray-900 uppercase tracking-widest mb-4">Service Client</h3>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="#" class="hover:text-pink-600 transition-colors">Contactez-nous</a></li>
+          <li><a href="#" class="hover:text-pink-600 transition-colors">Centre d'aide</a></li>
+          <li><a href="#" class="hover:text-pink-600 transition-colors">Informations sur la livraison</a></li>
+          <li><a href="#" class="hover:text-pink-600 transition-colors">Retours & Échanges</a></li>
+        </ul>
+      </div>
+
+      <!-- Colonne 4 : Entreprise -->
+      <div>
+        <h3 class="text-xs font-bold text-gray-900 uppercase tracking-widest mb-4">Entreprise</h3>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="#" class="hover:text-pink-600 transition-colors">À propos de nous</a></li>
+          <li><a href="#" class="hover:text-pink-600 transition-colors">Carrières</a></li>
+          <li><a href="#" class="hover:text-pink-600 transition-colors">Blog</a></li>
+          <li><a href="#" class="hover:text-pink-600 transition-colors">Presse</a></li>
+        </ul>
+      </div>
+
+      <!-- Colonne 5 : Légal -->
+      <div>
+        <h3 class="text-xs font-bold text-gray-900 uppercase tracking-widest mb-4">Légal</h3>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="#" class="hover:text-pink-600 transition-colors">Politique de confidentialité</a></li>
+          <li><a href="#" class="hover:text-pink-600 transition-colors">Conditions générales</a></li>
+          <li><a href="#" class="hover:text-pink-600 transition-colors">Politique relative aux cookies</a></li>
+          <li><a href="#" class="hover:text-pink-600 transition-colors">Accessibilité</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Ligne du bas : Réseaux sociaux & Copyright -->
+    <div class="border-t border-gray-100 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      
+      <!-- Réseaux Sociaux avec balises Angular FontAwesome -->
+      <div class="flex items-center gap-5 text-xl text-gray-400">
+        <a href="#" class="hover:text-pink-600 transition-colors" aria-label="Facebook">
+          <fa-icon [icon]="iconFacebook"></fa-icon>
+        </a>
+        <a href="#" class="hover:text-pink-600 transition-colors" aria-label="X (Twitter)">
+          <fa-icon [icon]="iconTwitter"></fa-icon>
+        </a>
+        <a href="#" class="hover:text-pink-600 transition-colors" aria-label="Instagram">
+          <fa-icon [icon]="iconInstagram"></fa-icon>
+        </a>
+        <a href="#" class="hover:text-pink-600 transition-colors" aria-label="Pinterest">
+          <fa-icon [icon]="iconPinterest"></fa-icon>
+        </a>
+      </div>
+      
+      <!-- Copyright -->
+      <p class="text-xs text-gray-400">
+        &copy; 2026 Boutique de Fleurs. Tous droits réservés.
+      </p>
+    </div>
+
+  </div>
+</footer>

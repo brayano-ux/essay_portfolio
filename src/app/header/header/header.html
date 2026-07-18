@@ -3,16 +3,16 @@
         <!-- <img [src]="img" alt="Logo"> -->
         <span class="pre">&lt; THE </span><span class="deux">CODE/</span><span style="color:rgb(3, 179, 3);">&gt;</span>
     </div>
-    <nav>
+    <button type="button" class="burger" (click)="showMenu = !showMenu" aria-label="Toggle navigation" [attr.aria-expanded]="showMenu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav [class.open]="showMenu">
         <ul>
             @for(i of tab;track i){
                 <li><a href="#{{i}}">{{i}}</a></li>
             }
-            <!-- <li><a class="premier" href="#home">{{home}}</a></li>
-            <li><a href="#about">{{about}}</a></li>
-            <li><a href="#services">{{services}}</a></li>
-            <li><a href="#projects">{{projects}}</a></li>
-            <li><a href="#contact">{{contact}}</a></li> -->
         </ul>
     </nav>
 </header>

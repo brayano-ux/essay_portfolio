@@ -16,5 +16,6 @@ export class Header {
   projects: string = "projects";
   contact: string = "contact";
   tab: string[] = ["home", "about", "services", "projects", "contact"];
+  showMenu = false;
   protected readonly faCartShopping = faCartShopping;
 }

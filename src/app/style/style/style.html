@@ -1,0 +1,54 @@
+<div class="flex flex-col items-center gap-4 py-12 px-4 text-center">
+    <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-yellow-500">
+        Adopter le Style
+    </h1>
+
+    <p class="text-gray-700 text-base sm:text-lg max-w-3xl">
+        Découvrez notre toute nouvelle collection de baskets haut de gamme :
+        confort, design et performance dans chaque paire.
+    </p>
+</div>
+
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+
+        @for (produit of listeProduits; track produit.id) {
+
+        <div
+            class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition duration-300 flex flex-col">
+
+            <div class="bg-gray-100 h-56 flex items-center justify-center overflow-hidden">
+                <img
+                    [src]="produit.image"
+                    [alt]="produit.title"
+                    class="w-full h-full object-cover hover:scale-105 transition duration-300">
+            </div>
+
+            <div class="p-4 flex flex-col flex-1 justify-between">
+
+                <div>
+                    <h3 class="text-lg font-semibold text-gray-900">
+                        {{ produit.title }}
+                    </h3>
+
+                    <p class="mt-2 text-xl font-bold text-gray-800">
+                        {{ produit.price }},00 $
+                    </p>
+                </div>
+
+                <button
+                    (click)="ajouterAuPanier(produit)"
+                    class="mt-5 w-full bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-3 rounded-lg transition">
+                    {{ produit.buttonText }}
+                </button>
+
+            </div>
+
+        </div>
+
+        }
+
+    </div>
+
+</div>
